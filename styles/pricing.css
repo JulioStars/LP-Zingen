@@ -1,0 +1,102 @@
+#pricing {
+    padding-block: 5rem;
+}
+
+.pricing {
+    header {
+        max-width:  50rem;
+        margin-inline: auto;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    & .cards {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+
+        & .card {
+            max-width: 24rem;
+            background-color: var(--surface-color);
+            border-radius: 24px;
+            border: 1px solid var(--stroke-color);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            & .price {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 1.5rem;
+                border-bottom: 1px solid var(--stroke-color);
+                padding-bottom: 2rem;
+
+                & .header {
+                    display: flex;
+                    flex-direction: column;
+                    gap: .5rem;
+
+                    & span {
+                        color: var(--text-color-primary);
+                        font: var(--fw-extra-bold) 1.25rem/120% var(--ff-inter);
+                    }
+                }
+
+                & button {
+                    width: 100%;
+                    justify-content: center;
+                }
+
+                & miniText {
+                    font: var(--fw-regular) var(--fs-base)/1.25rem var(--ff-inter);
+                    color: var(--text-color-secondary);
+                }
+            }
+
+            .features {
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 1rem;
+
+                    & li {
+                        display: flex;
+                        align-items: start;
+                        gap: .5rem;
+                    }
+
+                    observation {
+                        font: var(--fw-regular) var(--fs-sm)/1.25rem var(--ff-inter);
+                        color: var(--text-color-secondary);
+                    }
+                }
+            }
+        }
+        
+        .card-primary {
+            height: 35rem;
+            padding-inline: 2rem;
+            padding-block: 0;
+            justify-content: center;
+            border: none;
+        }
+        
+        .background {
+            position: relative;
+            background: var(--brand-gradient);
+            border-radius: 24px;
+            padding: 1.5px;
+        }
+    }
+}
+
+@media (width <= 1280px) {
+    .pricing .cards {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

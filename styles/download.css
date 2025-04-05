@@ -1,0 +1,59 @@
+#download {
+    padding-block: 5rem;
+    margin-inline: 1rem;
+}
+
+.download {
+    min-height: 542px;
+    width: 100%;
+    background-color: var(--surface-color);
+    position: relative;
+    border-radius: 24px;
+    align-content: center;
+    padding-inline: 5rem;
+
+    & .content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 2.5rem;
+    }
+
+    & img[src*="rapaz"] {
+        position: absolute;
+        height: 627px;
+        right: 0;
+        top: -5.25rem;
+    }
+
+    & .text {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    & .buttons {
+        display: flex;
+        gap: 1rem;
+    }
+
+    & .text, & .buttons {
+        max-width: 40rem;
+    }
+}
+
+@media (width <= 1160px) {
+    .download {
+        padding: 1rem;
+
+        & img[src*="rapaz"] {
+            display: none;
+        }
+    }
+}
+
+@media (width <= 425px) {
+    .download .content .buttons {
+        flex-direction: column;
+    }
+}

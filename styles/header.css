@@ -1,0 +1,25 @@
+.menu {
+    justify-content: space-between;
+    padding-block: 1.5rem;
+}
+
+nav, ul {
+    gap: 1.5rem;
+}
+
+nav, ul, .menu {
+    display: flex;
+    align-items: center;
+}
+
+@media (width <= 64em) {
+    .menu {
+        padding-block: 1rem;
+    }
+}
+
+@media (width <= 768px) {
+    .menu nav ul {
+        display: none;
+    }
+}

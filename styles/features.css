@@ -1,0 +1,104 @@
+#features {
+    padding-block: 5rem;
+}
+
+.features {
+    & .cards {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 17.5rem 1fr 1fr 17.5rem;
+        grid-template-rows: 25rem 25rem;
+        
+        & .card {
+            padding: 2.5rem 2rem;
+            background-color: var(--surface-color);
+            border: 1px solid var(--stroke-color);
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+
+            & img {
+                max-width: 15rem;
+                width: 100%;
+            }
+
+            .text {
+                width: 16rem;
+            }
+
+            &:nth-child(1) {
+                grid-column: 1/2;
+            }
+
+            &:nth-child(2) {
+                display: flex;
+                grid-column: 2/4;
+                gap: 1.5rem;
+
+                & img {
+                    position: absolute;
+                    right: 2rem;
+                    top: -8rem;
+                }
+            }
+
+            &:nth-child(4) {
+                grid-column: 1/3;
+                display: flex;
+                flex-direction: row-reverse;
+
+                & img {
+                    position: absolute;
+                    top: -8rem;
+                    left: 2rem;
+                }
+            }
+
+            &:nth-child(5) {
+                grid-column: 3/5;
+                display: flex;
+
+                img {
+                    position: absolute;
+                    bottom: -8rem;
+                    right: 2rem;
+                }
+            }
+
+            & h3 {
+                margin-block: 1rem .5rem;
+            }
+        }
+    }
+}
+
+@media (width < 1280px) {
+    .features {
+        & .cards {
+            & .card {
+                &:nth-child(2), &:nth-child(4), &:nth-child(5) {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 2rem;
+
+                    & img {
+                        display: none;
+                    }
+                }
+
+                & .text {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (width < 1024px) {
+    .features {
+        & .cards {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
