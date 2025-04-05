@@ -32,6 +32,7 @@ Concluído (A landing page está finalizada).
 
 * **Design:** Design visual criado por [**Ilana Mallak**](https://www.figma.com/@ilanamallak) como parte do material do curso de programação [**Full-Stack/Rocketseat**](https://app.rocketseat.com.br/journey/full-stack/overview).
 * **Implementação:** Implementação do código HTML e CSS realizada por **Julio Freitas**.
+* [**Link do design no Figma**](https://www.figma.com/community/file/1371886246180677672/lp-de-produto)
 
 ## Autor
 
